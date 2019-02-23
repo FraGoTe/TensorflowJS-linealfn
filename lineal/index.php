@@ -37,6 +37,8 @@
         model.predict(tf.tensor2d([12], [1, 1])).print();
     });
 
+    const saveResult = model.save('https://francis-gonzales.info/tensorflowjs/model.php');
+    console.log(saveResult);
 </script>
 </body>
 </html>
