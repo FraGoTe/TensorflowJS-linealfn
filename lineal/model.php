@@ -1,4 +1,4 @@
 <?php
 
-var_dump($HTTP_POST_FILES);
+var_dump($_FILES);
 exit;
