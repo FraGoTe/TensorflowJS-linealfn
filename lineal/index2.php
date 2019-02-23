@@ -12,14 +12,17 @@
 
     console.log('Iniciando TF.JS ...');
 
-    const model = tf.sequential();
+    const model = tf.loadModel('https://francis-gonzales.info/tensorflowjs/lineal/model.json');
 
-    model.load('https://francis-gonzales.info/tensorflowjs/lineal/model.json');
     console.log('Haciendo la prediccion de un x de 10 ...');
     model.predict(tf.tensor2d([10], [1, 1])).print();
     console.log('Haciendo la prediccion de un x de 12 ...');
     model.predict(tf.tensor2d([12], [1, 1])).print();
-// model.weights.bin
+    console.log('Haciendo la prediccion de un x de 14 ...');
+    model.predict(tf.tensor2d([12], [1, 1])).print();
+    console.log('Haciendo la prediccion de un x de 16 ...');
+    model.predict(tf.tensor2d([12], [1, 1])).print();
+
 
     const saveResult = model.save('https://francis-gonzales.info/tensorflowjs/lineal/model.php');
     console.log(saveResult);
